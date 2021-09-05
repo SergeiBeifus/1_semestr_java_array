@@ -1,15 +1,22 @@
 package com.company;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        int array[] = new int [4];
-        array[0] = 5;
-        array[1] = 0;
-        array[2] = 384;
-        array[3] = 22;
-        for(int i = 0;i < 4;i++) {
-            System.out.print((i + 1) + " " + array[i] + "\n");
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите колличество элементов одномерного массива");
+        int number = in.nextInt();
+        int array[] = new int [number];
+
+
+        for(int i = 0;i < number;i++) {
+            System.out.println("Введите "+(i + 1) + " элемент");
+            array[i] = in.nextInt();
+        }
+
+        for(int i = 0;i < number;i++) {
+            System.out.print((i + 1) + " элемент: " + array[i] + "\n");
         }
     }
 }
