@@ -14,9 +14,14 @@ public class Main {
             System.out.println("Введите "+(i + 1) + " элемент");
             array[i] = in.nextInt();
         }
-
+        System.out.print("Содержимое массива:");
         for(int i = 0;i < number;i++) {
-            System.out.print((i + 1) + " элемент: " + array[i] + "\n");
+            System.out.print(" " + array[i]);
         }
+        int sum = 0;
+        for(int i = 0;i < number;i++) {
+            sum = sum + array[i];
+        }
+        System.out.println("\nСумма элементов массива:" + sum);
     }
 }
